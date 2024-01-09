@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "triggerAllTests-headless": "npx cypress run",
+    "triggerAllTests-dashboard": "npx cypress run --record --key c5a1da96-ca66-40da-890b-b31b0de41fed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "\"Yuvraj\"",
