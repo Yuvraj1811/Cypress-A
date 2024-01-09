@@ -12,4 +12,6 @@ describe('Custom Command', ()=>{
        //  cy.UserData(data.name, data.lastName)
            cy.UserData(Cypress.env("firstname"),data.lastName)
     })
-})
+})   
+
+

@@ -11,7 +11,8 @@ describe("Test Contas US Form via Webdriver UI",()=>{
       cy.get('[name="email"]').type("ys444@gmail.com")
       cy.get('[name="message"]').type("Lerning cypress")
       cy.get('[type="submit"]').click()
-      cy.go("back")
+      // cy.go("back")
+
 
   })
 })
