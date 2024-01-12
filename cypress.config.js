@@ -8,7 +8,7 @@ module.exports = defineConfig({
     firstname: "Danny",
     DynamicUrl: "https://webdriveruniversity.com/"
   },
-  reporter: "cypress-mochawesome-reporter",
+  
   e2e: {
     
     setupNodeEvents(on, config) {
