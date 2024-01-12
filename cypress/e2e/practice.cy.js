@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-
+/// hello worlds
 describe('Handling data', () => {
     it('Calculate total number of price', () => {
         cy.visit("/");
@@ -15,7 +15,7 @@ describe('Handling data', () => {
                     return parseFloat(priceText);
                 }).get();
 
-                for (var i = 0; i < itemPrice.length; i++) {
+                for (var i = 0; i < itemPrice.length; i++) {           
                     if (!isNaN(itemPrice[i])) {
                         pricedetail += itemPrice[i];
                     }

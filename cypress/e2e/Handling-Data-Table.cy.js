@@ -26,6 +26,7 @@ describe('Handling Data', () => {
     
             }
             cy.log("Found" + numb)
+            cy.
         })
         
         
