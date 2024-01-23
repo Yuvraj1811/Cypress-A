@@ -2,18 +2,36 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   projectId: '54ep27',
-  
-  env: {
-    retries: 4,
-    firstname: "Danny",
-    DynamicUrl: "https://webdriveruniversity.com/"
+  reporterOptions: {
+    reportDir: 'cypress/results',
+    overwrite: false,
+    html: false,
+    json: true,
   },
-  
+  env: {
+    AutomationURL: "https://testautomationpractice.blogspot.com/",
+    firstname: "Danny",
+    DynamicUrl: "https://webdriveruniversity.com/",
+    OrangeUrl: "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+  },
+
   e2e: {
     
     setupNodeEvents(on, config) {
       // implement node event listeners here
-      require("cypress-mochawesome-reporter/plugin")(on)
+      
+      on('after:run',(result)=>{
+        console.log('Cypress test run is completed');
+        console.log('Total passed test:',result.totalPassed);
+        console.log('Total failed test:', result.totalFailed)
+      })
+      on('task',{
+        log(message){
+          console.log(message);
+          return null
+        }
+      })
+      
     },
     
     
@@ -21,10 +39,9 @@ module.exports = defineConfig({
     specPattern:"cypress/e2e/**/*.{js,jsx,ts,tsx,feature}",
     video:true,
     videoCompression:true,
-    reporter: 'cypress-multi-reporters',
-    reporterOptions: {
-      configFile: 'reporter-config.json',
-    },
+    
+  
+    
     
   },
    

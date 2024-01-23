@@ -1,4 +1,7 @@
 {
   "name": "Yuvraj",
-  "lastName": "Singh"
+  "lastName": "Singh",
+  "email": "yuvi@gmail.com",
+  "phone": "123456789",
+  "address": "London"
 }

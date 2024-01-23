@@ -27,3 +27,5 @@ Cypress.Commands.add('UserData',(firstName, LastName)=>{
     cy.get("input[name='first_name']").type(firstName)
     cy.get('input[name="last_name"]').type(LastName)
 })
+
+

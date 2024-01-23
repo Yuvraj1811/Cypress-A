@@ -1,6 +1,12 @@
-describe('', () => {
-    it('', () => {
-        cy.visit("https://automationteststore.com/")
-        cy.get('.categorymenu').contains('Apparel & accessories').click()
+/// <reference types = 'Cypress' />
+
+describe('read', () => {
+
+    it('read', () => {
+        
+        let timeout = Cypress.config('env')
+        
+        
+        
+        })
     });
-});

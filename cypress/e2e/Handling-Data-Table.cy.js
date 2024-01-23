@@ -9,9 +9,11 @@ describe('Handling Data', () => {
     })
     
     it('Calculate and assert the total age of all user',()=>{
+       
         var userDetail = []
         let numb = 0
         cy.get('#thumbnail-1 td').each(($ele, index, $list)=>{
+            cy.log($ele.text())
             userDetail[index] = $ele.text();
             
             
@@ -25,13 +27,13 @@ describe('Handling Data', () => {
         }
     
             }
-            cy.log("Found" + numb)
-            cy.
+            cy.log("Found: " + numb)
+            
         })
         
         
     })
-    it.only('Caculate and assert the age of a given user based on last name',()=>{
+    it('Caculate and assert the age of a given user based on last name',()=>{
         cy.get("#thumbnail-1 tr td:nth-child(2)").each(($ele, index, $list)=>{
           const text = $ele.text()
           if(text.includes('Wood')){

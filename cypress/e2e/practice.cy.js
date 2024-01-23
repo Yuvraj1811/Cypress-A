@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-/// hello worlds
+
 describe('Handling data', () => {
     it('Calculate total number of price', () => {
         cy.visit("/");
@@ -8,12 +8,12 @@ describe('Handling data', () => {
 
         var pricedetail = 0;
 
-        // cy.get("@itemPrice").then($linktext => {
-        //     if ($linktext && $linktext.length) {
-        //         var itemPrice = $linktext.map((index, element) => {
-        //             const priceText = Cypress.$(element).text().trim().replace('$', '');
-        //             return parseFloat(priceText);
-        //         }).get();
+        cy.get("@itemPrice").then($linktext => {
+            if ($linktext && $linktext.length) {
+                var itemPrice = $linktext.map((index, element) => {
+                    const priceText = Cypress.$(element).text().trim().replace('$', '');
+                    return parseFloat(priceText);
+                }).get();
 
                 for (var i = 0; i < itemPrice.length; i++) {           
                     if (!isNaN(itemPrice[i])) {

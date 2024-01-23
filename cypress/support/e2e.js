@@ -15,11 +15,13 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
-
+import'cypress-iframe'
+// import "cypress-mochawesome-reporter/registry"
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 require('@cypress/xpath')
 require('cypress-diff')
+
 
 //Hide all fetch/XHR request in Cy console, toogle, via cypress.json
 const app = window.top;
@@ -38,4 +40,3 @@ Cypress.on('uncaught:exception',(err, reunnable)=>{
   return false;
 })
 
-import 'cypress-mochawesome-reporter/register';
